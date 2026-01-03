@@ -61,7 +61,7 @@ const RoomCard = ({ room }) => {
       <div className="room-footer">
         <span className="room-watchers">👁 {room.participants} 人围观</span>
         <Link 
-          to={room.status === 'waiting' && room.currentParticipants < room.maxParticipants ? `/debate/${room.id}` : '#'}
+          to={room.status === 'waiting' && room.currentParticipants < room.maxParticipants ? `/debate/${room.id}?topic=${encodeURIComponent(room.title)}` : '#'}
           className={`join-button ${room.status !== 'waiting' || room.currentParticipants >= room.maxParticipants ? 'disabled' : ''}`}
         >
           {room.status === 'waiting' && room.currentParticipants < room.maxParticipants ? '加入辩论' : '房间已满'}

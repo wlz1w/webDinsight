@@ -49,7 +49,7 @@ const Match = () => {
       setMatchStatus('found')
       setTimeout(() => {
         const roomId = Math.floor(Math.random() * 10000)
-        navigate(`/debate/${roomId}`)
+        navigate(`/debate/${roomId}?topic=${encodeURIComponent(selectedTopic)}`)
       }, 2000)
     }, 3000)
   }
