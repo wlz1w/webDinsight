@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import './DebateRoom.css'
 
 const DebateRoom = () => {
   const { roomId } = useParams()
   const navigate = useNavigate()
+  const location = useLocation()
   const messagesEndRef = useRef(null)
-  const searchParams = new URLSearchParams(window.location.search)
+  const searchParams = new URLSearchParams(location.search)
   const topicFromUrl = decodeURIComponent(searchParams.get('topic') || '人工智能是否会取代人类工作')
 
   const topicMessages = {
