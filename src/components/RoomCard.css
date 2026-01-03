@@ -1,0 +1,115 @@
+.room-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.room-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.room-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.room-status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-waiting {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-ongoing {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-completed {
+  background: #f5f5f5;
+  color: #616161;
+}
+
+.room-category {
+  background: #f3e5f5;
+  color: #7b1fa2;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.room-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.room-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.room-info {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.room-difficulty,
+.room-participants {
+  font-size: 12px;
+  color: #888;
+  background: #f5f5f5;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.room-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.room-watchers {
+  font-size: 13px;
+  color: #666;
+}
+
+.join-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.join-button:hover:not(.disabled) {
+  opacity: 0.9;
+}
+
+.join-button.disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+  pointer-events: none;
+}
